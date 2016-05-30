@@ -14,6 +14,7 @@ public:
 
     bool lookup(int key) const;
     void insert(int key);
+    int lookup_and_count(int key);
 private:
     unsigned int q;
     unsigned int r;
@@ -26,6 +27,7 @@ private:
     bool isOccupied(unsigned int key) const;
     bool isContinuation(unsigned int key) const;
     bool isShifted(unsigned int key) const;
+    unsigned int hash1(unsigned int x) const;
 };
 
 #endif
